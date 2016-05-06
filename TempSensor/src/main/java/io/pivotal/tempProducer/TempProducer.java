@@ -80,8 +80,7 @@ public class TempProducer implements Runnable {
 						logger.debug("temp :" + temp);
 						TempSensor t = new TempSensor(String.valueOf(id) + vin, alt, temp);
 						logger.info(t.toString());
-						//Post it
-						//someclient.post(t);
+						//Need to do this correctly in PCF
 						HttpClient httpClient = new DefaultHttpClient();
 						HttpPost request = new HttpPost("http://localhost:8888");
 						StringEntity strTemp = new StringEntity(t.toString());
