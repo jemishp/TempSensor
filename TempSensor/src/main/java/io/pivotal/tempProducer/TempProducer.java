@@ -82,7 +82,7 @@ public class TempProducer implements Runnable {
 						logger.info(t.toString());
 						//Need to do this correctly in PCF
 						HttpClient httpClient = new DefaultHttpClient();
-						HttpPost request = new HttpPost("http://localhost:8888");
+						HttpPost request = new HttpPost("http://52.87.245.12:52251");
 						StringEntity strTemp = new StringEntity(t.toString());
 						request.setEntity(strTemp);
 						request.setHeader("Content-Type", "application/json");
